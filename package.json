@@ -1,0 +1,21 @@
+{
+  "name": "play-app",
+  "version": "1.0.0",
+  "description": "A practice Learning Project",
+  "keywords": [
+    "FullStack",
+    "Backend"
+  ],
+  "license": "ISC",
+  "author": "Sahyadri Manglam",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.5"
+  }
+}
