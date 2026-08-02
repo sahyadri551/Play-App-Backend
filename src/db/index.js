@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
+import chalk from 'chalk';
 
 import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
@@ -7,9 +8,9 @@ dotenv.config({ path: "../.env" });
 const connectDB = async () => {
     try {
         const connection = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-        console.log(`MongoDB connected: ${connection.connection.host}`);
+        console.log(chalk.green(`->>> MongoDB connected: ${connection.connection.host}`));
     } catch (error) {
-        console.error("Error connecting to MongoDB:", error);
+        console.error(chalk.red("->>> Error connecting to MongoDB:"), error);
         process.exit(1);
     }
 };
